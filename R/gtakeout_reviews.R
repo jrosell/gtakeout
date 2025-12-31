@@ -1,7 +1,7 @@
 #' Extract the reviews form a Takedown zip file.
 #' #'
 #' @param zipfile Required path to the zip file containing the reviews
-#' @param ... Additional arguments (if applicable)
+#' @param ... Other optional arguments
 #' @param exdir Optional directory to extract the contents of the zip file
 #'
 #' @return A data frame of reviews
