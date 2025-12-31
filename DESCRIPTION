@@ -8,7 +8,7 @@ Description: gtakeout provides tools to extract, process, and manage data export
 License: MIT + file LICENSE
 Depends: R (>= 4.1)
 Encoding: UTF-8
-Language: en
+Language: en-US
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Imports: 

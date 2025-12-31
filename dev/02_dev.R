@@ -1,2 +1,2 @@
-devtools::load_all()
+devtools::install()
 devtools::build_readme()
