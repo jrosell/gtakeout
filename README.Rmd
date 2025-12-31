@@ -29,9 +29,11 @@ You can install the development version of gtakeout like so:
 install.packages("gtakeout", repos = "https://jrosell.r-universe.dev")
 ```
 
-## Example
+## Examples
 
-This is a basic example which shows you how to solve a common problem:
+### Google Business Profiles
+
+This is a basic example which shows you how to extract the reviews form a Takedown zip file.
 
 
 ```{r example}

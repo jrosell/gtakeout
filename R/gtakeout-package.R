@@ -2,10 +2,12 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @importFrom dplyr .data
 #' @importFrom dplyr filter
 #' @importFrom dplyr left_join
 #' @importFrom dplyr pull
 #' @importFrom dplyr tibble
+#' @importFrom here here
 #' @importFrom jsonlite read_json
 #' @importFrom purrr keep
 #' @importFrom purrr map_dfr

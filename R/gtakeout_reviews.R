@@ -1,13 +1,20 @@
+#' Extract the reviews form a Takedown zip file.
+#' #'
+#' @param zipfile Required path to the zip file containing the reviews
+#' @param ... Additional arguments (if applicable)
+#' @param exdir Optional directory to extract the contents of the zip file
+#'
+#' @return A data frame of reviews
 #' @export
-gtakeout_reviews <- \(zipfile, exdir = here::here("data")) {
+gtakeout_reviews <- \(zipfile, ..., exdir = here::here("data")) {
   unzip_reviews(zipfile, exdir)
 
   additionalData_files <-
     zipfile |>
     zip_list() |>
-    filter(str_detect(filename, "Google Business Profile")) |>
-    filter(str_detect(filename, "additionalData.json")) |>
-    pull(filename)
+    filter(str_detect(.data$filename, "Google Business Profile")) |>
+    filter(str_detect(.data$filename, "additionalData.json")) |>
+    pull(.data$filename)
 
   additionalData_df <- additionalData_files |>
     map_dfr(\(x) {
@@ -17,9 +24,9 @@ gtakeout_reviews <- \(zipfile, exdir = here::here("data")) {
   reviews_files <-
     zipfile |>
     zip_list() |>
-    filter(str_detect(filename, "Google Business Profile")) |>
-    filter(str_detect(filename, "reviews.json")) |>
-    pull(filename)
+    filter(str_detect(.data$filename, "Google Business Profile")) |>
+    filter(str_detect(.data$filename, "reviews.json")) |>
+    pull(.data$filename)
 
   reviews_df <- reviews_files |>
     map_dfr(\(x) {
@@ -100,19 +107,19 @@ unzip_reviews <- \(zipfile, exdir = here::here("data")) {
   additionalData_files <-
     zipfile |>
     zip_list() |>
-    filter(str_detect(filename, "Google Business Profile")) |>
-    filter(str_detect(filename, "additionalData.json")) |>
-    pull(filename)
+    filter(str_detect(.data$filename, "Google Business Profile")) |>
+    filter(str_detect(.data$filename, "additionalData.json")) |>
+    pull(.data$filename)
 
   reviews_files <-
     zipfile |>
     zip_list() |>
-    filter(str_detect(filename, "Google Business Profile")) |>
-    filter(str_detect(filename, "reviews.json")) |>
-    pull(filename)
+    filter(str_detect(.data$filename, "Google Business Profile")) |>
+    filter(str_detect(.data$filename, "reviews.json")) |>
+    pull(.data$filename)
 
   files <- c(additionalData_files, reviews_files)
-  unzip(
+  zip::unzip(
     zipfile,
     files = c(additionalData_files, reviews_files),
     overwrite = TRUE,
