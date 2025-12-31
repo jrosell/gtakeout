@@ -1,0 +1,12 @@
+^gtakeout\.Rproj$
+^\.Rproj\.user$
+^README\.Rmd$
+^vignettes/articles/\.quarto$
+^vignettes/articles/*_files$
+^vignettes/articles$
+^vignettes/\.quarto$
+^vignettes/*_files$
+^dev$
+^data$
+^[.]?air[.]toml$
+^\.vscode$

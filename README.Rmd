@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# gtakeout
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of gtakeout is to extract data from Google Takeout.
+
+## Installation
+
+You can install the development version of gtakeout like so:
+
+``` r
+install.packages("gtakeout", repos = "https://jrosell.r-universe.dev")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+
+```{r example}
+library(gtakeout)
+
+# devtools::load_all()
+
+takeout_zipfile <- fs::dir_ls(here::here("data", "input"), glob = "*.zip") |>
+  head(1)
+
+output_path <- fs::dir_create(here::here("data", "output"))
+
+gtakeout_reviews(takeout_zipfile, output_path)
+
+```

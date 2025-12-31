@@ -1,0 +1,17 @@
+#' @keywords internal
+"_PACKAGE"
+
+## usethis namespace: start
+#' @importFrom dplyr filter
+#' @importFrom dplyr left_join
+#' @importFrom dplyr pull
+#' @importFrom dplyr tibble
+#' @importFrom jsonlite read_json
+#' @importFrom purrr keep
+#' @importFrom purrr map_dfr
+#' @importFrom purrr pluck
+#' @importFrom stringr str_detect
+#' @importFrom stringr str_extract
+#' @importFrom zip zip_list
+## usethis namespace: end
+NULL
