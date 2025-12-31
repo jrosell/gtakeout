@@ -20,8 +20,8 @@ gtakeout_reviews <- \(zipfile, ..., exdir = here::here("data")) {
   additionalData_files <-
     zipfile |>
     zip_list() |>
-    filter(str_detect(.data$filename, "Google Business Profile")) |>
-    filter(str_detect(.data$filename, "additionalData.json")) |>
+    filter(str_detect(.data[["filename"]], "Google Business Profile")) |>
+    filter(str_detect(.data[["filename"]], "additionalData.json")) |>
     pull(all_of("filename"))
 
   additionalData_df <- additionalData_files |>
@@ -32,8 +32,8 @@ gtakeout_reviews <- \(zipfile, ..., exdir = here::here("data")) {
   reviews_files <-
     zipfile |>
     zip_list() |>
-    filter(str_detect(.data$filename, "Google Business Profile")) |>
-    filter(str_detect(.data$filename, "reviews.json")) |>
+    filter(str_detect(.data[["filename"]], "Google Business Profile")) |>
+    filter(str_detect(.data[["filename"]], "reviews.json")) |>
     pull(all_of("filename"))
 
   reviews_df <- reviews_files |>
@@ -115,15 +115,15 @@ unzip_reviews <- \(zipfile, exdir = here::here("data")) {
   additionalData_files <-
     zipfile |>
     zip_list() |>
-    filter(str_detect(.data$filename, "Google Business Profile")) |>
-    filter(str_detect(.data$filename, "additionalData.json")) |>
+    filter(str_detect(.data[["filename"]], "Google Business Profile")) |>
+    filter(str_detect(.data[["filename"]], "additionalData.json")) |>
     pull(all_of("filename"))
 
   reviews_files <-
     zipfile |>
     zip_list() |>
-    filter(str_detect(.data$filename, "Google Business Profile")) |>
-    filter(str_detect(.data$filename, "reviews.json")) |>
+    filter(str_detect(.data[["filename"]], "Google Business Profile")) |>
+    filter(str_detect(.data[["filename"]], "reviews.json")) |>
     pull(all_of("filename"))
 
   files <- c(additionalData_files, reviews_files)
