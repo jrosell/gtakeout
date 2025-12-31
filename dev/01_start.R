@@ -11,7 +11,7 @@ usethis::use_package("jsonlite")
 usethis::use_package("fs")
 usethis::use_import_from(
   "dplyr",
-  c(".data", "pull", "filter", "left_join", "tibble")
+  c(".data", "all_of", "pull", "filter", "left_join", "tibble")
 )
 usethis::use_import_from("purrr", c("map_dfr", "pluck", "keep"))
 usethis::use_import_from("stringr", c("str_detect", "str_extract"))

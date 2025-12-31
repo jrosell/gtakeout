@@ -22,3 +22,6 @@ Imports:
     zip
 URL: https://github.com/jrosell/gtakeout
 BugReports: https://github.com/jrosell/gtakeout/issues
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

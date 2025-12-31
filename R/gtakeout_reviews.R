@@ -5,6 +5,14 @@
 #' @param exdir Optional directory to extract the contents of the zip file
 #'
 #' @return A data frame of reviews
+#' @examples
+#' zip_path <- system.file(
+#'     "extdata",
+#'     "takeout-example.zip",
+#'     package = "gtakeout"
+#' )
+#' gtakeout_reviews(zip_path, exdir = tempdir())
+#'
 #' @export
 gtakeout_reviews <- \(zipfile, ..., exdir = here::here("data")) {
   unzip_reviews(zipfile, exdir)
@@ -14,11 +22,11 @@ gtakeout_reviews <- \(zipfile, ..., exdir = here::here("data")) {
     zip_list() |>
     filter(str_detect(.data$filename, "Google Business Profile")) |>
     filter(str_detect(.data$filename, "additionalData.json")) |>
-    pull(.data$filename)
+    pull(all_of("filename"))
 
   additionalData_df <- additionalData_files |>
     map_dfr(\(x) {
-      extract_listing_name(x, exdir = here::here("data", "output"))
+      extract_listing_name(x, exdir = exdir)
     })
 
   reviews_files <-
@@ -26,11 +34,11 @@ gtakeout_reviews <- \(zipfile, ..., exdir = here::here("data")) {
     zip_list() |>
     filter(str_detect(.data$filename, "Google Business Profile")) |>
     filter(str_detect(.data$filename, "reviews.json")) |>
-    pull(.data$filename)
+    pull(all_of("filename"))
 
   reviews_df <- reviews_files |>
     map_dfr(\(x) {
-      extract_reviews(x, exdir = here::here("data", "output"))
+      extract_reviews(x, exdir = exdir)
     })
 
   reviews_full <- reviews_df |>
@@ -109,14 +117,14 @@ unzip_reviews <- \(zipfile, exdir = here::here("data")) {
     zip_list() |>
     filter(str_detect(.data$filename, "Google Business Profile")) |>
     filter(str_detect(.data$filename, "additionalData.json")) |>
-    pull(.data$filename)
+    pull(all_of("filename"))
 
   reviews_files <-
     zipfile |>
     zip_list() |>
     filter(str_detect(.data$filename, "Google Business Profile")) |>
     filter(str_detect(.data$filename, "reviews.json")) |>
-    pull(.data$filename)
+    pull(all_of("filename"))
 
   files <- c(additionalData_files, reviews_files)
   zip::unzip(

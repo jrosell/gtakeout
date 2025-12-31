@@ -21,3 +21,12 @@ A data frame of reviews
 Extract the reviews form a Takedown zip file.
 #'
 }
+\examples{
+zip_path <- system.file(
+    "extdata",
+    "takeout-example.zip",
+    package = "gtakeout"
+)
+gtakeout_reviews(zip_path, exdir = tempdir())
+
+}
