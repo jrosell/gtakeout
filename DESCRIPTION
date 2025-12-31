@@ -1,8 +1,8 @@
 Package: gtakeout
-Title: Extract data from Google Takeout
+Title: Extract Data from Google Takeout
 Version: 0.1.0
 Authors@R: 
-    person("Jordi", "Rosell", , "jroselln@gmail.com", role = c("aut", "cre"),
+    person("Jordi", "Rosell", , "jroselln@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-4349-1458"))
 Description: gtakeout provides tools to extract, process, and manage data exported from Google Takeout. It simplifies the retrieval of structured information from various Google services, enabling users to analyze their personal data efficiently within R.
 License: MIT + file LICENSE

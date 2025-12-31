@@ -46,6 +46,6 @@ takeout_zipfile <- fs::dir_ls(here::here("data", "input"), glob = "*.zip") |>
 
 output_path <- fs::dir_create(here::here("data", "output"))
 
-gtakeout_reviews(takeout_zipfile, output_path)
+gtakeout_reviews(takeout_zipfile, exdir = output_path)
 
 ```

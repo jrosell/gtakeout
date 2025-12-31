@@ -1,3 +1,4 @@
+devtools::build_readme()
 devtools::spell_check()
 devtools::check()
 devtools::document()
