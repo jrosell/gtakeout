@@ -26,3 +26,5 @@ Imports:
     rlang,
     stringr,
     zip
+URL: https://github.com/jrosell/gtakeout
+BugReports: https://github.com/jrosell/gtakeout/issues
