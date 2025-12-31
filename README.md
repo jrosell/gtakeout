@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/jrosell/gtakeout/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jrosell/gtakeout/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of gtakeout is to extract data from Google Takeout.
@@ -17,11 +18,9 @@ You can install the development version of gtakeout like so:
 install.packages("gtakeout", repos = "https://jrosell.r-universe.dev")
 ```
 
-## Examples
+## Example
 
-### Reviews from Google Business Profiles
-
-This is a basic example which shows you how to get the reviews from your Google Business Profiles in Takedown extracted files.
+This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(gtakeout)
