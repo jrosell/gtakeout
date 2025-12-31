@@ -4,7 +4,7 @@ Version: 0.1.0
 Authors@R: 
     person("Jordi", "Rosell", , "jroselln@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-4349-1458"))
-Description: gtakeout provides tools to extract, process, and manage data exported from Google Takeout. It simplifies the retrieval of structured information from various Google services, enabling users to analyze their personal data efficiently within R.
+Description: Provides functions to extract and analyze Google Takeout review data, including unzipping export files and summarizing reviews.
 License: MIT + file LICENSE
 Depends: R (>= 4.1)
 Encoding: UTF-8

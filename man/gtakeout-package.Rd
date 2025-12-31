@@ -4,9 +4,9 @@
 \name{gtakeout-package}
 \alias{gtakeout}
 \alias{gtakeout-package}
-\title{gtakeout: Extract data from Google Takeout}
+\title{gtakeout: Extract Data from Google Takeout}
 \description{
-gtakeout provides tools to extract, process, and manage data exported from Google Takeout. It simplifies the retrieval of structured information from various Google services, enabling users to analyze their personal data efficiently within R.
+Provides functions to extract and analyze Google Takeout review data, including unzipping export files and summarizing reviews.
 }
 \seealso{
 Useful links:
@@ -17,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Jordi Rosell \email{jroselln@gmail.com} (\href{https://orcid.org/0000-0002-4349-1458}{ORCID})
+\strong{Maintainer}: Jordi Rosell \email{jroselln@gmail.com} (\href{https://orcid.org/0000-0002-4349-1458}{ORCID}) [copyright holder]
 
 }
 \keyword{internal}

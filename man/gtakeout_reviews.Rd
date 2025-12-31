@@ -10,7 +10,7 @@ gtakeout_reviews(zipfile, ..., exdir = here::here("data"))
 \arguments{
 \item{zipfile}{Required path to the zip file containing the reviews}
 
-\item{...}{Additional arguments (if applicable)}
+\item{...}{Other optional arguments}
 
 \item{exdir}{Optional directory to extract the contents of the zip file}
 }
