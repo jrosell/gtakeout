@@ -11,3 +11,4 @@
 ^[.]?air[.]toml$
 ^\.vscode$
 ^LICENSE\.md$
+^\.github$

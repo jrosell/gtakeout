@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # gtakeout
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/jrosell/gtakeout/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jrosell/gtakeout/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of gtakeout is to extract data from Google Takeout.
