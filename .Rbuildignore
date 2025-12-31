@@ -10,3 +10,4 @@
 ^data$
 ^[.]?air[.]toml$
 ^\.vscode$
+^LICENSE\.md$

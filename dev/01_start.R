@@ -1,4 +1,5 @@
 usethis::create_package(here::here("."))
+usethis::use_mit_license()
 usethis::use_readme_rmd()
 desc::desc_set("Depends", "R (>= 4.1)")
 usethis::use_package("rlang")
