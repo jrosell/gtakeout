@@ -4,7 +4,7 @@ Version: 0.1.0
 Authors@R: 
     person("Jordi", "Rosell", , "jroselln@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-4349-1458"))
-Description: Provides functions for analyzing Google Takeout data, including unzipping exported files and extracting reviews from Google Business Profiles.
+Description: Provides functions to analyze Google Takeout data, including unzipping exported files and extracting reviews.
 License: MIT + file LICENSE
 Depends: R (>= 4.1)
 Encoding: UTF-8
