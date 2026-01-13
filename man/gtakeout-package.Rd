@@ -6,7 +6,7 @@
 \alias{gtakeout-package}
 \title{gtakeout: Extract Data from Google Takeout}
 \description{
-Provides functions to analyze Google Takeout data, including unzipping exported files and extracting reviews.
+Provides functions to analyze data exported from 'Google Takeout'. The package supports unzipping archives and extracting user review data from Google Business Profile exports into tidy data frames for further analysis.
 }
 \seealso{
 Useful links:
