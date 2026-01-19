@@ -1,6 +1,6 @@
 Package: gtakeout
 Title: Extract Data from Google Takeout
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: 
     person("Jordi", "Rosell", , "jroselln@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-4349-1458"))
